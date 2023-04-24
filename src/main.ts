@@ -4,9 +4,9 @@ import "./uni.promisify.adaptor";
 
 Vue.config.productionTip = false;
 
-const app = new (
+const APP =
   typeof App === "function"
     ? App
-    : Vue.extend(Object.assign({ mpType: "app" }, App))
-)();
+    : Vue.extend(Object.assign({ mpType: "app" }, App));
+const app = new APP();
 app.$mount();
