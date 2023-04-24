@@ -7,5 +7,5 @@ dist/
 **/*.svg
 **/*.sh
 
-public
+public/
 .npmrc
