@@ -1,26 +1,26 @@
-const webpack = require('webpack');
+const webpack = require("webpack");
 const plugins = [];
 
 if (process.env.UNI_OPT_TREESHAKINGNG) {
   plugins.push(
-    require('@dcloudio/vue-cli-plugin-uni-optimize/packages/babel-plugin-uni-api/index.js'),
+    require("@dcloudio/vue-cli-plugin-uni-optimize/packages/babel-plugin-uni-api/index.js"),
   );
 }
 
 if (
-  (process.env.UNI_PLATFORM === 'app-plus' && process.env.UNI_USING_V8) ||
-  (process.env.UNI_PLATFORM === 'h5' && process.env.UNI_H5_BROWSER === 'builtin')
+  (process.env.UNI_PLATFORM === "app-plus" && process.env.UNI_USING_V8) ||
+  (process.env.UNI_PLATFORM === "h5" && process.env.UNI_H5_BROWSER === "builtin")
 ) {
-  const path = require('path');
+  const path = require("path");
 
   const isWin = /^win/.test(process.platform);
 
-  const normalizePath = (path) => (isWin ? path.replace(/\\/g, '/') : path);
+  const normalizePath = (path) => (isWin ? path.replace(/\\/g, "/") : path);
 
   const input = normalizePath(process.env.UNI_INPUT_DIR);
   try {
     plugins.push([
-      require('@dcloudio/vue-cli-plugin-hbuilderx/packages/babel-plugin-console'),
+      require("@dcloudio/vue-cli-plugin-hbuilderx/packages/babel-plugin-console"),
       {
         file(file) {
           file = normalizePath(file);
@@ -34,10 +34,10 @@ if (
   } catch (e) {}
 }
 
-process.UNI_LIBRARIES = process.UNI_LIBRARIES || ['@dcloudio/uni-ui'];
+process.UNI_LIBRARIES = process.UNI_LIBRARIES || ["@dcloudio/uni-ui"];
 process.UNI_LIBRARIES.forEach((libraryName) => {
   plugins.push([
-    'import',
+    "import",
     {
       libraryName: libraryName,
       customName: (name) => {
@@ -47,25 +47,25 @@ process.UNI_LIBRARIES.forEach((libraryName) => {
   ]);
 });
 
-if (process.env.UNI_PLATFORM !== 'h5') {
-  plugins.push('@babel/plugin-transform-runtime');
+if (process.env.UNI_PLATFORM !== "h5") {
+  plugins.push("@babel/plugin-transform-runtime");
 }
 
 const config = {
   presets: [
     [
-      '@vue/app',
+      "@vue/app",
       {
-        modules: webpack.version[0] > 4 ? 'auto' : 'commonjs',
-        useBuiltIns: process.env.UNI_PLATFORM === 'h5' ? 'usage' : 'entry',
+        modules: webpack.version[0] > 4 ? "auto" : "commonjs",
+        useBuiltIns: process.env.UNI_PLATFORM === "h5" ? "usage" : "entry",
       },
     ],
   ],
   plugins,
 };
 
-const UNI_H5_TEST = '**/@dcloudio/uni-h5/dist/index.umd.min.js';
-if (process.env.NODE_ENV === 'production') {
+const UNI_H5_TEST = "**/@dcloudio/uni-h5/dist/index.umd.min.js";
+if (process.env.NODE_ENV === "production") {
   config.overrides = [
     {
       test: UNI_H5_TEST,

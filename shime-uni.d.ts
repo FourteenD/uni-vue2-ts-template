@@ -1,5 +1,5 @@
-import Vue from 'vue';
-declare module 'vue/types/options' {
+import Vue from "vue";
+declare module "vue/types/options" {
   type Hooks = App.AppInstance & Page.PageInstance;
   interface ComponentOptions<V extends Vue> extends Hooks {
     /**
