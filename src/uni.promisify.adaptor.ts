@@ -3,8 +3,8 @@ uni.addInterceptor({
     if (
       !(
         !!res &&
-        (typeof res === "object" || typeof res === "function") &&
-        typeof res.then === "function"
+        (typeof res === 'object' || typeof res === 'function') &&
+        typeof res.then === 'function'
       )
     ) {
       return res;

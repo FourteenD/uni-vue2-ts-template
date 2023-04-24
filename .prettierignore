@@ -1,8 +1,8 @@
-dist
+node_modules/
+unpackage/
+dist/
 .local
 .output.js
-node_modules
-unpackage
 
 **/*.svg
 **/*.sh
