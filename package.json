@@ -41,9 +41,10 @@
     "dev:quickapp-webview-union": "cross-env NODE_ENV=development UNI_PLATFORM=quickapp-webview-union vue-cli-service uni-build --watch",
     "info": "node node_modules/@dcloudio/vue-cli-plugin-uni/commands/info.js",
     "lint:eslint": "eslint --cache --max-warnings 0  \"{src,mock}/**/*.{vue,ts,tsx}\" --fix",
+    "lint:lint-staged": "lint-staged",
     "lint:prettier": "prettier --write  \"src/**/*.{js,json,tsx,css,less,scss,vue,html,md}\"",
     "lint:stylelint": "stylelint --cache --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
-    "lint:lint-staged": "lint-staged",
+    "prepare": "husky install",
     "serve": "npm run dev:h5",
     "serve:quickapp-native": "node node_modules/@dcloudio/uni-quickapp-native/bin/serve.js",
     "test:android": "cross-env UNI_PLATFORM=app-plus UNI_OS_NAME=android jest -i",
@@ -51,13 +52,11 @@
     "test:ios": "cross-env UNI_PLATFORM=app-plus UNI_OS_NAME=ios jest -i",
     "test:mp-baidu": "cross-env UNI_PLATFORM=mp-baidu jest -i",
     "test:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin jest -i",
-    "update:uni": "npx @dcloudio/uvm",
-    "prepare": "husky install"
+    "update:uni": "npx @dcloudio/uvm"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "prettier --write",
-      "eslint --fix"
+      "prettier --write"
     ],
     "{!(package)*.json,*.code-snippets,.!(browserslist)*rc}": [
       "prettier --write--parser json"
@@ -66,13 +65,10 @@
       "prettier --write"
     ],
     "*.vue": [
-      "prettier --write",
-      "eslint --fix",
-      "stylelint --fix"
+      "prettier --write"
     ],
     "*.{scss,less,styl,html}": [
-      "prettier --write",
-      "stylelint --fix"
+      "prettier --write"
     ],
     "*.md": [
       "prettier --write"
@@ -130,14 +126,23 @@
     "@vue/cli-service": "~5.0.0",
     "babel-plugin-import": "^1.11.0",
     "cross-env": "^7.0.2",
+    "eslint": "^8.39.0",
+    "husky": "^8.0.3",
     "jest": "^25.4.0",
+    "lint-staged": "^13.2.1",
     "mini-types": "*",
     "miniprogram-api-typings": "*",
     "postcss-comment": "^2.0.0",
     "prettier": "^2.8.8",
     "prettier-plugin-packagejson": "^2.4.3",
+    "stylelint": "^15.6.0",
     "typescript": "~4.5.5",
     "vue-template-compiler": ">= 2.6.14 < 2.7"
+  },
+  "packageManager": "pnpm@8.1.0",
+  "engines": {
+    "node": ">=16.15.1",
+    "pnpm": ">=8.1.0"
   },
   "uni-app": {
     "scripts": {}
