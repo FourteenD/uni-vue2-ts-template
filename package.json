@@ -21,7 +21,8 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "prettier --write"
+      "prettier --write",
+      "eslint --fix"
     ],
     "{!(package)*.json,*.code-snippets,.!(browserslist)*rc}": [
       "prettier --write--parser json"
@@ -30,7 +31,8 @@
       "prettier --write"
     ],
     "*.vue": [
-      "prettier --write"
+      "prettier --write",
+      "eslint --fix"
     ],
     "*.{scss,less,styl,html}": [
       "prettier --write"
@@ -90,6 +92,7 @@
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-typescript": "~5.0.1",
     "@vue/cli-service": "~5.0.0",
+    "@workspace/eslint-config": "workspace:*",
     "@workspace/prettier-config": "workspace:*",
     "@workspace/ts-config": "workspace:*",
     "babel-plugin-import": "^1.11.0",
