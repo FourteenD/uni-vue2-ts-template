@@ -1,4 +1,6 @@
-export default {
+import type { Config } from "prettier";
+
+const config: Config = {
   printWidth: 120,
   trailingComma: "all",
   htmlWhitespaceSensitivity: "strict",
@@ -12,3 +14,5 @@ export default {
     },
   ],
 };
+
+export default config;

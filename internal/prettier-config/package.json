@@ -9,7 +9,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@types/prettier": "^2.7.2"
+  "devDependencies": {
+    "@types/prettier": "^2.7.2",
+    "prettier-plugin-packagejson": "^2.4.3"
   }
 }

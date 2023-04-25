@@ -181,10 +181,13 @@ importers:
         version: 2.6.14
 
   internal/prettier-config:
-    dependencies:
+    devDependencies:
       '@types/prettier':
         specifier: ^2.7.2
         version: 2.7.2
+      prettier-plugin-packagejson:
+        specifier: ^2.4.3
+        version: 2.4.3(prettier@2.8.8)
 
   internal/ts-config: {}
 
@@ -2833,7 +2836,7 @@ packages:
 
   /@types/prettier@2.7.2:
     resolution: {integrity: sha512-KufADq8uQqo1pYKVIYzfKbJfBAc0sOeXqGbFaSpv8MRmC/zXgowNZmFcbngndGk922QDmOASEXUZCaY48gs4cg==}
-    dev: false
+    dev: true
 
   /@types/qs@6.9.7:
     resolution: {integrity: sha512-FGa1F62FT09qcrueBA6qYTrJPVDzah9a+493+o2PCXsesWHIn27G98TsSMs3WPNbZIEj4+VJf6saSFpvD+3Zsw==}
