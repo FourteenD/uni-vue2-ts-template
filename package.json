@@ -54,7 +54,7 @@
     "test:ios": "cross-env UNI_PLATFORM=app-plus UNI_OS_NAME=ios jest -i",
     "test:mp-baidu": "cross-env UNI_PLATFORM=mp-baidu jest -i",
     "test:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin jest -i",
-    "update:uni": "npx @dcloudio/uvm"
+    "update:uni": "pnpx @dcloudio/uvm"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
