@@ -131,6 +131,12 @@ importers:
       '@vue/cli-service':
         specifier: ~5.0.0
         version: 5.0.1(@babel/core@7.21.4)(vue-template-compiler@2.6.14)(vue@2.6.14)
+      '@workspace/prettier-config':
+        specifier: workspace:*
+        version: link:internal/prettier-config
+      '@workspace/ts-config':
+        specifier: workspace:*
+        version: link:internal/ts-config
       babel-plugin-import:
         specifier: ^1.11.0
         version: 1.11.0
@@ -173,6 +179,14 @@ importers:
       vue-template-compiler:
         specifier: '>= 2.6.14 < 2.7'
         version: 2.6.14
+
+  internal/prettier-config:
+    dependencies:
+      '@types/prettier':
+        specifier: ^2.7.2
+        version: 2.7.2
+
+  internal/ts-config: {}
 
 packages:
 
@@ -2816,6 +2830,10 @@ packages:
   /@types/prettier@1.19.1:
     resolution: {integrity: sha512-5qOlnZscTn4xxM5MeGXAMOsIOIKIbh9e85zJWfBRVPlRMEVawzoPhINYbRGkBZCI8LxvBe7tJCdWiarA99OZfQ==}
     dev: true
+
+  /@types/prettier@2.7.2:
+    resolution: {integrity: sha512-KufADq8uQqo1pYKVIYzfKbJfBAc0sOeXqGbFaSpv8MRmC/zXgowNZmFcbngndGk922QDmOASEXUZCaY48gs4cg==}
+    dev: false
 
   /@types/qs@6.9.7:
     resolution: {integrity: sha512-FGa1F62FT09qcrueBA6qYTrJPVDzah9a+493+o2PCXsesWHIn27G98TsSMs3WPNbZIEj4+VJf6saSFpvD+3Zsw==}
