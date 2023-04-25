@@ -2,13 +2,13 @@
   "name": "@workspace/eslint-config",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://github.com/vbenjs/vue-vben-admin",
+  "homepage": "https://github.com/FourteenD/uni-vue2-ts-template",
   "bugs": {
-    "url": "https://github.com/vbenjs/vue-vben-admin/issues"
+    "url": "https://github.com/FourteenD/uni-vue2-ts-template/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vbenjs/vue-vben-admin.git",
+    "url": "git+https://github.com/FourteenD/uni-vue2-ts-template.git",
     "directory": "internal/eslint-config"
   },
   "license": "MIT",

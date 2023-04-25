@@ -1,5 +1,5 @@
 {
-  "name": "@workspace/prettier-config",
+  "name": "@workspace/stylelint-config",
   "version": "1.0.0",
   "private": true,
   "homepage": "https://github.com/FourteenD/uni-vue2-ts-template",
@@ -9,7 +9,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FourteenD/uni-vue2-ts-template.git",
-    "directory": "internal/eslint-config"
+    "directory": "internal/stylelint-config"
   },
   "license": "MIT",
   "exports": {
@@ -31,7 +31,19 @@
     "stub": "pnpm unbuild --stub"
   },
   "devDependencies": {
-    "@types/prettier": "^2.7.2",
-    "prettier-plugin-packagejson": "^2.4.3"
+    "postcss": "^8.4.21",
+    "postcss-html": "^1.5.0",
+    "postcss-less": "^6.0.0",
+    "postcss-scss": "^4.0.6",
+    "prettier": "^2.8.7",
+    "stylelint": "^15.4.0",
+    "stylelint-config-property-sort-order-smacss": "^9.1.0",
+    "stylelint-config-recommended": "^11.0.0",
+    "stylelint-config-recommended-scss": "^9.0.1",
+    "stylelint-config-recommended-vue": "^1.4.0",
+    "stylelint-config-standard": "^32.0.0",
+    "stylelint-config-standard-scss": "^7.0.1",
+    "stylelint-order": "^6.0.3",
+    "stylelint-prettier": "^3.0.0"
   }
 }
