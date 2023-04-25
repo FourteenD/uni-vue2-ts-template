@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "bootstrap": "pnpm install",
-    "build": "npm run build:h5",
+    "build": "pnpm run build:h5",
     "build:h5": "cross-env NODE_ENV=production UNI_PLATFORM=h5 vue-cli-service uni-build",
-    "dev": "npm run dev:h5",
+    "dev": "pnpm run dev:h5",
     "dev:h5": "cross-env NODE_ENV=development UNI_PLATFORM=h5 vue-cli-service uni-serve",
     "info": "node node_modules/@dcloudio/vue-cli-plugin-uni/commands/info.js",
     "lint:eslint": "eslint --cache --max-warnings 0  \"{src,mock}/**/*.{vue,ts,tsx}\" --fix",
