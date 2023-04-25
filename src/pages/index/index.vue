@@ -1,6 +1,6 @@
 <template>
   <view class="content">
-    <image class="logo" src="../../static/logo.png"></image>
+    <image class="logo" src="../../static/logo.png" />
     <view>
       <text class="title">{{ title }}</text>
     </view>
