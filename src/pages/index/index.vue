@@ -30,9 +30,9 @@ export default Vue.extend({
 }
 
 .logo {
-  height: 200rpx;
   width: 200rpx;
-  margin: 200rpx auto 50rpx auto;
+  height: 200rpx;
+  margin: 200rpx auto 50rpx;
 }
 
 .text-area {
@@ -41,7 +41,7 @@ export default Vue.extend({
 }
 
 .title {
-  font-size: 36rpx;
   color: #8f8f94;
+  font-size: 36rpx;
 }
 </style>

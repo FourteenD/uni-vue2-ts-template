@@ -27,15 +27,16 @@
     ],
     "*.vue": [
       "prettier --write",
-      "eslint --fix"
+      "eslint --fix",
+      "stylelint --fix"
     ],
     "*.{scss,less,styl,html}": [
-      "prettier --write"
+      "prettier --write",
+      "stylelint --fix"
     ],
     "*.md": [
       "prettier --write"
-    ],
-    "*.{js,css,md}": "prettier --write"
+    ]
   },
   "browserslist": [
     "Android >= 4.4",
@@ -89,6 +90,7 @@
     "@vue/cli-service": "~5.0.0",
     "@workspace/eslint-config": "workspace:*",
     "@workspace/prettier-config": "workspace:*",
+    "@workspace/stylelint-config": "workspace:*",
     "@workspace/ts-config": "workspace:*",
     "babel-plugin-import": "^1.11.0",
     "cross-env": "^7.0.2",
