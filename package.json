@@ -73,6 +73,8 @@
   },
   "devDependencies": {
     "@babel/plugin-syntax-typescript": "^7.2.0",
+    "@commitlint/cli": "^17.6.1",
+    "@commitlint/config-conventional": "^17.6.1",
     "@dcloudio/types": "^3.3.2",
     "@dcloudio/uni-automator": "2.0.2-3070920230324001",
     "@dcloudio/uni-cli-i18n": "2.0.2-3070920230324001",
