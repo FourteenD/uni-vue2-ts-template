@@ -4,11 +4,6 @@
   "private": true,
   "scripts": {
     "bootstrap": "pnpm install",
-    "build": "pnpm run build:h5",
-    "build:h5": "cross-env NODE_ENV=production UNI_PLATFORM=h5 vue-cli-service uni-build",
-    "dev": "pnpm run dev:h5",
-    "dev:h5": "cross-env NODE_ENV=development UNI_PLATFORM=h5 vue-cli-service uni-serve",
-    "info": "node node_modules/@dcloudio/vue-cli-plugin-uni/commands/info.js",
     "postinstall": "turbo run stub",
     "lint": "turbo run lint",
     "lint:eslint": "eslint --cache --max-warnings 0  \"{src,mock}/**/*.{vue,ts,tsx}\" --fix",
@@ -17,7 +12,6 @@
     "lint:stylelint": "stylelint --cache --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
     "prepare": "husky install",
     "reinstall": "rimraf pnpm-lock.yaml && rimraf package.lock.json && rimraf node_modules && npm run bootstrap",
-    "test:h5": "cross-env UNI_PLATFORM=h5 jest -i",
     "update:uni": "pnpx @dcloudio/uvm"
   },
   "lint-staged": {
