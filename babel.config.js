@@ -1,4 +1,5 @@
 const webpack = require("webpack");
+
 const plugins = [];
 
 if (process.env.UNI_OPT_TREESHAKINGNG) {
@@ -29,7 +30,9 @@ if (
         },
       },
     ]);
-  } catch (e) {}
+  } catch (e) {
+    console.error(e);
+  }
 }
 
 process.UNI_LIBRARIES = process.UNI_LIBRARIES || ["@dcloudio/uni-ui"];
