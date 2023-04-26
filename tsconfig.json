@@ -1,16 +1,7 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@workspace/ts-config/uni-app.json",
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "strict": true,
-    "jsx": "preserve",
-    "importHelpers": true,
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "experimentalDecorators": true,
-    "sourceMap": true,
-    "skipLibCheck": true,
     "baseUrl": ".",
     "types": [
       "webpack-env",
@@ -21,8 +12,7 @@
     "paths": {
       "@/*": ["./src/*"],
       "~/*": ["./*"]
-    },
-    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+    }
   },
   "exclude": ["node_modules", "unpackage", "dist", "src/**/*.nvue"]
 }
