@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "bootstrap": "pnpm install",
+    "commit": "czg",
     "postinstall": "turbo run stub",
     "lint": "turbo run lint",
     "lint:eslint": "eslint --cache --max-warnings 0  \"{src,mock}/**/*.{vue,ts,tsx}\" --fix",
@@ -38,10 +39,11 @@
       "prettier --write"
     ]
   },
-  "browserslist": [
-    "Android >= 4.4",
-    "ios >= 9"
-  ],
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
+  },
   "dependencies": {
     "@dcloudio/uni-app": "2.0.2-3070920230324001",
     "@dcloudio/uni-app-plus": "2.0.2-3070920230324001",
@@ -96,6 +98,8 @@
     "@workspace/ts-config": "workspace:*",
     "babel-plugin-import": "^1.11.0",
     "cross-env": "^7.0.2",
+    "cz-git": "^1.6.1",
+    "czg": "^1.6.1",
     "eslint": "^8.39.0",
     "husky": "^8.0.3",
     "jest": "^25.4.0",
