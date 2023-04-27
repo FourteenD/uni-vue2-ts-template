@@ -86,7 +86,10 @@ module.exports = {
       confirmCommit: "是否提交或修改commit ?",
     },
     types: [
-      { value: "feat", name: "feat:     新增功能" },
+      {
+        value: "feat",
+        name: "feat:     新增功能",
+      },
       { value: "fix", name: "fix:      修复缺陷" },
       { value: "docs", name: "docs:     文档变更" },
       { value: "style", name: "style:    代码格式" },
